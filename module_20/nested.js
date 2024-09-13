@@ -5,14 +5,29 @@ let phone = {
   weight : '78g',
   differenceModel : {
     brand : 'nokia',
-    color : 'black',
     price : 20000,
+    backgroundColor : {
+      bgColor : 'green',
+    }
   },
-  Model : ['IPHONE', 'THC', 'LAVA', 'OPP'],
+  Model : ['IPHONE', 'THC', 'LAVA', 'OPP']
 }
-const allKeys = Object.keys(phone.differenceModel);
-// console.log(allKeys);
-const allValue = Object.values(phone.differenceModel.color);
-// console.log(allValue);
-phone.color = 'purple';
-console.log(phone.color);
+phone.differenceModel.backgroundColor.bgColor = 'red';
+// console.log(phone.differenceModel.backgroundColor.bgColor);
+
+
+const keys = Object.keys(phone);
+// console.log(keys);
+
+const values = Object.values(phone);
+// console.log(values);
+
+
+phone.differenceModel.backgroundColor.bgColor = 'purple';
+// console.log(phone.differenceModel.backgroundColor.bgColor)
+
+phone.Model[1] = 'IPHONE 40 PRO MAX';
+// console.log(phone.Model[1]);
+
+const deleted = delete phone.price;
+console.log(phone);
