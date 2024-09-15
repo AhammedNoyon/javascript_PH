@@ -1,0 +1,11 @@
+.section-title{
+  font-size: 48px;
+  color: purple;
+  font-style: italic;
+  font-weight: bold;
+}
+.section-pera{
+  font-size: 2rem;
+  color: blue;
+  font-weight: bolder;
+}
