@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Bubble</title>
+</head>
+<body>
+  <section id="first-section">
+    <h1 id="section-title">this is section title</h1>
+    <div>
+      <ul id="items-container">
+        <li class="item">Lorem ipsum dolor sit amet.</li>
+        <li class="item">Expedita neque dolor sint nostrum.</li>
+        <li class="item">Tempore commodi distinctio incidunt voluptates.</li>
+        <li class="item">Illum quae voluptatum quod consequatur.</li>
+      </ul>
+    </div>
+    <!-- <button id="add-item-btn">Add item</button> -->
+  </section>
+  <button id="add-item-btn">Add item</button>
+  <script>
+    document.getElementById('first-section').addEventListener('click', function(e){
+      // console.log('ul clicked');
+      // console.log(e.target);
+      e.target.parentNode.removeChild(e.target);
+    })
+    const addItemButton = document.getElementById('add-item-btn').addEventListener('click', function(){
+      const itemsContainer = document.getElementById('items-container');
+      const li = document.createElement('li');
+      li.innerText = 'bangladesh is land of river.';
+      li.classList.add('item');
+      itemsContainer.appendChild(li);
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More event</title>
+</head>
+<body>
+  <button id="btn1">i am button</button>
+  <button id="btn2">i am button</button><br><br>
+  <label for="text">enter your name :
+    <input id="your-name" type="text">
+  </label><br><br>
+  <label for="text">enter your father name :
+    <input id="father-name" type="text">
+  </label>
+
+  <script>
+    // document.getElementById('btn1').addEventListener('mouseenter',function(){
+    //   console.log('i am coming');
+    // })
+
+    // document.getElementById('btn2').addEventListener('mousemove',function(){
+    //   console.log('i am coming');
+    // })
+
+    // document.getElementById('your-name').addEventListener('focus',function(){
+    //   console.log('i am coming');
+    // })
+
+    // document.getElementById('your-name').addEventListener('blur',function(){
+    //   console.log('i am coming');
+    // })
+
+  document.getElementById('father-name').addEventListener('keyup',function(){
+    console.log('i am clicked');
+    })
+  </script>
+</body>
+</html>

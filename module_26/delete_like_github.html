@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete confirmation button like github</title>
+</head>
+<body>
+<h1 id="title">bangladesh is land of river.<br> so it is very interesting to it. </h1>
+<input type="text" name="name" id="input-field" placeholder="please type delete"><br><br>
+<button disabled  id="delete-btn">click me</button>
+<script>
+
+  document.getElementById('input-field').addEventListener('keyup', function(){
+    const inputField = document.getElementById('input-field');
+    const inputText = inputField.value;
+    // console.log(inputText);
+    const equalText = 'delete';
+    equalText.toLowerCase();//toLowerCase hoi ni
+    const deleteBtn = document.getElementById('delete-btn');
+    if(inputText === equalText){
+      deleteBtn.removeAttribute('disabled');
+    }else{
+      deleteBtn.setAttribute('disabled', true);
+    }
+  })
+
+document.getElementById('input-field').addEventListener('keyup', function(event){
+  console.log(event)
+  const inputText = event.target.value;
+  const deleteBtn = document.getElementById('delete-btn');
+  if(inputText === 'delete'){
+    deleteBtn.removeAttribute('disabled');
+  }else{
+    deleteBtn.setAttribute('disabled', true);
+  }
+})
+
+
+  document.getElementById('delete-btn').addEventListener('click', function(){
+    const titleText = document.getElementById('title');
+    titleText.style.display = 'none';
+
+    const inputField = document.getElementById('input-field');
+    inputField.value = '';
+  })
+</script>
+</body>
+</html>

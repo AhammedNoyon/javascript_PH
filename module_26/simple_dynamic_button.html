@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Dynamic with button</title>
+  </head>
+  <body>
+    <h1>I am website title</h1>
+    <!-- system 1 -->
+    <button onclick="console.log('hello I am button')">direct</button>
+    <!-- system 2 -->
+    <button onclick="makeGreen ()">green with call</button>
+    <!-- system 3 -->
+    <button id="make-blue">blue with id</button>
+    <!-- system 4 -->
+    <button id="make-purple">make purple with addEventListner</button>
+    <script>
+      //system 2
+      function makeGreen() {
+        document.body.style.backgroundColor = 'green'
+      }
+      //system 3
+      const makeBlue = document.getElementById('make-blue')
+      makeBlue.onclick = makeBlueBg;
+      function makeBlueBg(){
+        document.body.style.backgroundColor = 'blue';
+      }
+      //system 4
+      document.getElementById('make-purple').addEventListener('click', function(){
+        document.body.style.backgroundColor = 'purple';
+      })
+    </script>
+  </body>
+</html>

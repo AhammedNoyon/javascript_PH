@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text change by button click</title>
+  </head>
+  <body>
+    <h1 id="main-heading">Bangladesh is land of river</h1>
+    <button id="change-btn">update</button>
+    <h2 id="heading2">I am creating for input text</h2>
+    <input type="text" name="name" id="name-input">
+    <br>
+    <br>
+    <button id="input-btn">input button</button>
+    <script>
+      const changeBtn = document.getElementById('change-btn').addEventListener('click', function(){
+        const mainHeading = document.getElementById('main-heading');
+        mainHeading.innerText = 'I am change by button';
+      })
+
+      document.getElementById('input-btn').addEventListener('click', function(){
+        const input = document.getElementById('name-input');
+        const inputText = input.value;
+        // console.log(inputText);
+        const heading2 = document.getElementById('heading2');
+        heading2.innerText = inputText;
+        input.value = '';
+      })
+    </script>
+  </body>
+</html>

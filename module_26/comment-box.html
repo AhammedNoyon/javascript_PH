@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>create comment box</title>
+</head>
+<body>
+  <div id="desc-container">
+    <p id="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum iste esse quod iure modi perferendis minus non, praesentium odit ab officiis, accusantium explicabo! Eos, dignissimos, accusamus at laudantium nihil aliquam dolor id quod obcaecati debitis, eligendi veniam sequi? Animi soluta et sed, ex non fugit quisquam officia dolorum id voluptatum.</p>
+    <p id="desc">Quam ipsa voluptatem nam exercitationem excepturi beatae enim cumque ea itaque rem? A eius nihil voluptates, consequatur vitae pariatur esse, error deserunt ullam repudiandae exercitationem, adipisci unde recusandae ex. Vero officiis praesentium libero, nemo quaerat sit placeat, autem quisquam animi illum, minus alias tempore deleniti fuga natus soluta modi harum.</p>
+    <p id="desc">Totam eius ea enim, quo eligendi, inventore quod veniam aperiam quibusdam debitis sequi! Quis magnam praesentium illo itaque sed ad quasi voluptas iste fuga. Molestiae iusto placeat sequi atque? Unde iste porro libero optio quia quibusdam beatae? Ullam magni repellat facilis nulla saepe, ea iure aliquid nobis, voluptates commodi quisquam.</p>
+  </div>
+  <textarea name="textarea" id="comment-box" cols="40" rows="5"></textarea>
+  <br>
+  <button id="post-btn">post</button>
+  <script>
+    document.getElementById('post-btn').addEventListener('click', function(){
+      // console.log('button is clicked');
+      const area = document.getElementById('comment-box');
+      const areaText = area.value;
+
+      const descContainer = document.getElementById('desc-container');
+      const newDesc = document.createElement('p');
+      // console.log(newDesc);
+      newDesc.innerText = areaText;
+      descContainer.appendChild(newDesc);
+      area.value = '';
+    })
+  </script>
+</body>
+</html>
